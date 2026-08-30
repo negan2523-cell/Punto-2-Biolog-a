@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama: Rutas Metabólicas Celulares</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0fdf4;
+            color: #1f2937;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #166534;
+        }
+        .cell-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .organelle {
+            width: 90%;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .cytoplasm {
+            background-color: #e0f2fe;
+            border: 2px dashed #0284c7;
+        }
+        .mitochondria {
+            background-color: #fef3c7;
+            border: 2px solid #d97706;
+        }
+        .process-card {
+            background-color: white;
+            border-left: 5px solid #10b981;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px auto;
+            width: 80%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        .process-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #047857;
+            margin-bottom: 10px;
+        }
+        .details {
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #b91c1c;
+        }
+        .arrow {
+            font-size: 2rem;
+            color: #4b5563;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        .location-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #374151;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #9ca3af;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Rutas Metabólicas en Células Animales</h1>
+    
+    <div class="cell-container">
+        <div class="organelle cytoplasm">
+            <div class="location-title">Lugar: Citoplasma</div>
+            
+            <div class="process-card">
+                <div class="process-title">1. Glucólisis</div>
+                <div class="details">
+                    <p><strong>Sustrato inicial:</strong> Glucosa</p>
+                    <p><strong>Producto principal:</strong> 2 moléculas de Piruvato</p>
+                    <p><strong>Moléculas energéticas generadas:</strong> 2 ATP (netos) y 2 NADH</p>
+                    <p><span class="highlight">Enzimas clave:</span> Hexoquinasa, Fosfofructoquinasa</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow">&#8595; El Piruvato ingresa a la mitocondria &#8595;</div>
+
+        <div class="organelle mitochondria">
+            <div class="location-title">Lugar: Matriz Mitocondrial</div>
+            
+            <div class="process-card">
+                <div class="process-title">2. Oxidación del Piruvato</div>
+                <div class="details">
+                    <p><strong>Sustrato inicial:</strong> Piruvato</p>
+                    <p><strong>Producto principal:</strong> Acetil-CoA + CO2</p>
+                    <p><strong>Moléculas energéticas generadas:</strong> NADH</p>
+                    <p><span class="highlight">Enzima clave:</span> Complejo Piruvato Deshidrogenasa</p>
+                </div>
+            </div>
+
+            <div class="arrow">&#8595; El Acetil-CoA entra al ciclo &#8595;</div>
+
+            <div class="process-card">
+                <div class="process-title">3. Ciclo de Krebs (Ciclo del Ácido Cítrico)</div>
+                <div class="details">
+                    <p><strong>Sustrato inicial:</strong> Acetil-CoA (se une al Oxalacetato)</p>
+                    <p><strong>Producto principal:</strong> Liberación de CO2</p>
+                    <p><strong>Moléculas energéticas generadas (por Acetil-CoA):</strong> 3 NADH, 1 FADH2, 1 ATP</p>
+                    <p><span class="highlight">Enzimas clave:</span> Citrato sintasa, Isocitrato deshidrogenasa</p>
+                </div>
+            </div>
+
+            <div class="arrow">&#8595; NADH y FADH2 transportan electrones &#8595;</div>
+            
+            <div class="location-title" style="margin-top: 20px;">Lugar: Membrana Mitocondrial Interna</div>
+
+            <div class="process-card">
+                <div class="process-title">4. Cadena de Transporte de Electrones</div>
+                <div class="details">
+                    <p><strong>Sustratos iniciales:</strong> NADH, FADH2, Oxígeno (O2 como aceptor final)</p>
+                    <p><strong>Producto principal:</strong> Agua (H2O)</p>
+                    <p><strong>Moléculas energéticas generadas:</strong> Gran cantidad de ATP (~28-34 ATP)</p>
+                    <p><span class="highlight">Enzimas/Estructuras clave:</span> Complejos I al IV, ATP sintasa</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
